@@ -1,5 +1,5 @@
 unit Unit1;
-привет
+при
 
 interface
 
