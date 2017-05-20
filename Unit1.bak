@@ -1,4 +1,5 @@
 unit Unit1;
+привет
 
 interface
 
@@ -122,8 +123,8 @@ if (ADOTable1.FieldByName('h').AsInteger=ADOTable2.FieldByName('h').AsInteger)
      form1.Caption:=inttostr(h)+':'+inttostr(m)+'; '+timetostr(now()-t);
     end;
   end
-   else showmessage('═х ёютярфрхЄ тЁхь  т сшф ш юЇЇхЁ.');
-form1.Caption:='╧Ёю°ыю:'+timetostr(now()-t);
+   else showmessage('Не совпадает время в бид и оффер.');
+form1.Caption:='Прошло:'+timetostr(now()-t);
 Excel.Visible :=true;
 end;
 
@@ -160,13 +161,13 @@ if flag=0 then
  begin
  timer1.Enabled:=true;
  flag:=1;
- button2.Caption:='╬ёЄрэютшЄ№ ёыхфютрэшх чр ьшэєЄэ√ьш ётхўрьш.';
+ button2.Caption:='Остановить следование за минутными свечами.';
  end
   else
   begin
   timer1.Enabled:=false;
   flag:=0;
-  button2.Caption:='╟ряєёЄшЄ№ ёыхфютрэшх чр ьшэєЄэ√ьш ётхўрьш.';
+  button2.Caption:='Запустить следование за минутными свечами.';
   end;
 end;
 
@@ -249,8 +250,8 @@ if (ADOTable1.FieldByName('h').AsInteger=ADOTable2.FieldByName('h').AsInteger)
      form1.Caption:=inttostr(h)+':'+inttostr(m)+'; '+timetostr(now()-t);
     end;
   end
-   else showmessage('═х ёютярфрхЄ тЁхь  т сшф ш юЇЇхЁ.');
-form1.Caption:='╧Ёю°ыю:'+timetostr(now()-t);
+   else showmessage('Не совпадает время в бид и оффер.');
+form1.Caption:='Прошло:'+timetostr(now()-t);
 end;
 
 procedure TForm1.FormActivate(Sender: TObject);
@@ -329,7 +330,7 @@ form1.Caption:=inttostr(h)+':'+inttostr(m)+'; '+timetostr(now()-t);
 if flag=1 then
 begin
 timer1.Enabled:=true;
-form1.Caption:='╬цшфрэшх ётхўш. '+inttostr(h)+':'+inttostr(m)+'; '+timetostr(now()-t);
+form1.Caption:='Ожидание свечи. '+inttostr(h)+':'+inttostr(m)+'; '+timetostr(now()-t);
 end;
 end;
 
